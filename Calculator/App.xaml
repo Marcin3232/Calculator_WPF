@@ -1,0 +1,22 @@
+﻿<Application xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  x:Class="Calculator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Calculator"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#FF777777"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#FF001673"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#FF00020A"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#FFFFFFFF"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
