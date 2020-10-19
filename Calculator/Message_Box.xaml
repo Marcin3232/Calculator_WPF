@@ -6,13 +6,14 @@
         xmlns:materierialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Message_Box" Height="160" Width="250">
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Title="Message_Box" Height="160" Width="250" MouseMove="Window_MouseMove">
     <Border Background="#FF180925" BorderBrush="{DynamicResource PrimaryHueDarkForegroundBrush}" BorderThickness="5" >
         <Grid>
             <StackPanel>
                 <Grid Height="80">
                     <StackPanel>
-                        <TextBlock FontSize="18" FontFamily="Calibri" Margin="10" Style="{StaticResource MaterialDesignBody2TextBlock}" TextWrapping="Wrap"
+                        <TextBlock x:Name="Text_message" FontSize="18" FontFamily="Calibri" Margin="10" Style="{StaticResource MaterialDesignBody2TextBlock}" TextWrapping="Wrap"
                                    TextAlignment="Center" Foreground="{StaticResource ResourceKey=PrimaryHueDarkForegroundBrush}">
                         Do you want to disable applications?
                             <TextBlock.Effect>
@@ -30,13 +31,13 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="Button_No" Grid.Column="1" Grid.Row="0" BorderBrush="{DynamicResource PrimaryHueDarkForegroundBrush}" Margin="5,0,5,0" >
+                    <Button x:Name="Button_No" Grid.Column="1" Grid.Row="0" BorderBrush="{DynamicResource PrimaryHueDarkForegroundBrush}" Margin="5,0,5,0" Click="Button_No_Click" >
                         <Button.Effect>
                             <DropShadowEffect BlurRadius="5" ShadowDepth="1" Color="AliceBlue"/>
                         </Button.Effect>
                         <materierialDesign:PackIcon Kind="Multiply" Width="auto" Height="auto"/>
                     </Button>
-                    <Button x:Name="Button_Yes" Grid.Column="0" Grid.Row="0" BorderBrush="{DynamicResource PrimaryHueDarkForegroundBrush}" Margin="5,0,5,0"   >
+                    <Button x:Name="Button_Yes" Grid.Column="0" Grid.Row="0" BorderBrush="{DynamicResource PrimaryHueDarkForegroundBrush}" Margin="5,0,5,0" Click="Button_Yes_Click"   >
                         <Button.Effect>
                             <DropShadowEffect BlurRadius="5" ShadowDepth="1" Color="AliceBlue"/>
                         </Button.Effect>

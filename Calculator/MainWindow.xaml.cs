@@ -30,9 +30,6 @@ namespace Calculator
             Text_current_operation.Text = string.Empty;
         }
 
-
-
-
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -57,16 +54,8 @@ namespace Calculator
 
         private void Button_power_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Do you want to disable applications?", Application.ResourceAssembly.GetName().Name,
-            MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
-            switch (result)
-            {
-                case MessageBoxResult.Yes:
-                    System.Windows.Application.Current.Shutdown();
-                    break;
-                case MessageBoxResult.No:
-                    break;
-            }
+            Message_Box   message_Box  = new Message_Box();
+            message_Box.ShowDialog();
         }
 
         private void Button_percent_Click(object sender, RoutedEventArgs e)
